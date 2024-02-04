@@ -18,25 +18,31 @@
         <div class="wrap">
             <header>
                 <h1>Global Dial</h1>
-                <select>
+                <select id="cities">
                     <option>Select a city...</option>
-                    <option>Paris</option>
-                    <option>Sydney</option>
-                    <option>Alkmaar</option>
-                    <option>Budapest</option>
-                    <option>Local</option>
+                    <option value="Europe/Paris">Paris</option>
+                    <option value="Australia/Sydney">Sydney</option>
+                    <option value="Europe/Amsterdam">Amsterdam</option>
+                    <option value="Europe/Budapest">Budapest</option>
+                    <option value="current">Local</option>
                 </select>
             </header>
             <main>
-                <div class="city-info">
-                    <h3 class="city-name">Alkmaar</h3>
-                    <span class="date">Sunday, 10th August 2024</span>
-                    <span class="time">10:00:00am</span>
-                </div>
-                <div class="city-info">
-                    <h3 class="city-name">Budapest</h3>
-                    <span class="date">Sunday, 10th August 2024</span>
-                    <span class="time">10:00:00am</span>
+                <div class="display-info">
+                    <div class="city-info" id="Amsterdam">
+                        <h3 class="city-name">Amsterdam</h3>
+                        <span class="city-date" id="city-date-amsterdam"
+                            >Sunday, 10th August 2024</span
+                        >
+                        <span class="time" id="city-time-amsterdam"
+                            >10:00:00am</span
+                        >
+                    </div>
+                    <div class="city-info" id="Budapest">
+                        <h3 class="city-name">Budapest</h3>
+                        <span class="city-date">Sunday, 10th August 2024</span>
+                        <span class="time">10:00:00am</span>
+                    </div>
                 </div>
             </main>
         </div>

@@ -24,6 +24,8 @@ select {
 
 span {
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: space-between;
 }
 
 .city-info {
@@ -31,6 +33,10 @@ span {
     border-bottom: 1px dotted #99a799;
     width: 80%;
     margin: 0 auto;
+}
+
+.time {
+    font-weight: bold;
 }
 
 .wrap {

@@ -1,1 +1,43 @@
+body {
+    background-color: #d3e4cd;
+    font-family: sans-serif;
+    color: rgb(43, 40, 40);
+    font-family: 'DM Sans';
+}
 
+header {
+    padding: 10px 10px 20px 10px;
+}
+
+h1,
+h3 {
+    margin: 0;
+}
+
+select {
+    width: 60%;
+    box-shadow: 2px 2px 2px #adc2a9;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(43, 40, 40);
+}
+
+span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.city-info {
+    padding: 10px;
+    border-bottom: 1px dotted #99a799;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wrap {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #fef5ed;
+    box-shadow: 5px 5px 5px #adc2a9;
+    padding: 10px;
+}

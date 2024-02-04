@@ -1,3 +1,5 @@
+let cityList = document.querySelector('#cities')
+
 function displayInfo(cities) {
     let html = ``
     for (let i = 0; i < cities.length; i++) {
@@ -10,7 +12,7 @@ function displayInfo(cities) {
 
 function construct(city) {
     let date = moment().tz(city).format('MMMM Do YYYY')
-    let time = moment().tz(city).format('h:mm:ss')
+    let time = moment().tz(city).format('LTS')
     return `                    <div class="city-info">
                         <h3 class="city-name">${city.split('/')[1]}</h3>
                         <span class="city-date"
@@ -23,3 +25,11 @@ function construct(city) {
 }
 
 displayInfo(['Europe/Amsterdam', 'Australia/Sydney'])
+
+function updateCity() {
+    let newCity = document.querySelector('.display-info')
+    let citySelected = cities.options[cities.selectedIndex].value
+    newCity.innerHTML = construct(`${citySelected}`)
+}
+
+cityList.addEventListener('change', updateCity)

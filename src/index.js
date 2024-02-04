@@ -25,6 +25,15 @@ function construct(city) {
 }
 
 displayInfo(['Europe/Amsterdam', 'Australia/Sydney'])
+let interval = setInterval(
+    () => displayInfo(['Europe/Amsterdam', 'Europe/Budapest']),
+    1000
+)
+
+function listener() {
+    clearInterval(interval)
+    interval = setInterval(updateCity, 1000)
+}
 
 function updateCity() {
     let newCity = document.querySelector('.display-info')
@@ -52,4 +61,4 @@ function guessLocal() {
                         >
                     </div>`
 }
-cityList.addEventListener('change', updateCity)
+cityList.addEventListener('change', listener)

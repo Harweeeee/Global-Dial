@@ -9,6 +9,11 @@ header {
     padding: 10px 10px 20px 10px;
 }
 
+a {
+    color: rgb(43, 40, 40);
+    text-decoration: none;
+}
+
 h1,
 h3 {
     margin: 0;
@@ -28,6 +33,10 @@ span {
     justify-content: space-between;
 }
 
+p {
+    color: #93a793;
+    text-align: center;
+}
 .city-info {
     padding: 10px;
     border-bottom: 1px dotted #99a799;

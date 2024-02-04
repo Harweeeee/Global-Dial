@@ -29,7 +29,27 @@ displayInfo(['Europe/Amsterdam', 'Australia/Sydney'])
 function updateCity() {
     let newCity = document.querySelector('.display-info')
     let citySelected = cities.options[cities.selectedIndex].value
-    newCity.innerHTML = construct(`${citySelected}`)
+    if (citySelected === 'current') {
+        newCity.innerHTML = guessLocal()
+    } else if (citySelected === 'Select a city...') {
+        return
+    } else {
+        newCity.innerHTML = construct(`${citySelected}`)
+    }
 }
 
+function guessLocal() {
+    let localZone = moment.tz.guess()
+    let localDate = moment.tz(localZone).format('MMMM Do YYYY')
+    let localTime = moment.tz(localZone).format('LTS')
+    return `                    <div class="city-info">
+                        <h3 class="city-name">${localZone.split('/')[1]}</h3>
+                        <span class="city-date"
+                            >${localDate}</span
+                        >
+                        <span class="time" 
+                            >${localTime}</span
+                        >
+                    </div>`
+}
 cityList.addEventListener('change', updateCity)
